@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/compVideoThumbCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="4dp"
+    android:checkable="true"
+    app:cardBackgroundColor="@color/card_bg_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/compVideoThumbImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_folder_24dp"
+            />
+        <ImageView
+            android:id="@+id/compVideoThumbPlay"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/vector_play"
+            />
+
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>

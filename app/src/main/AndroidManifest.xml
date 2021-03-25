@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hisenberg.mygallery">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/NewAppTheme">
+        <provider
+            android:name=".GenericFileProvider"
+            android:authorities="com.hisenberg.mygallery.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/MainActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity_ImageSearch"
+            android:launchMode="singleTask"
+            android:theme="@style/ImgSearchTheme">
+            <intent-filter android:label="Image Search">
+                <action android:name="android.intent.action.SENDTO" />
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity_Image_SearchResult" />
+        <activity
+            android:name=".Activity_Bottom_Navigation"
+            android:label="@string/title_activity__bottom__navigation" />
+        <activity android:name=".Activity_Video_Albums" />
+        <activity android:name=".Activity_Video_AlbumDetails" />
+        <activity
+            android:name=".Activity_Video_Detail"
+            android:theme="@style/VideoPlayerTheme"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode">
+            <intent-filter android:label="Stream Video">
+                <action android:name="android.intent.action.SENDTO" />
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity_Pdf_Albums" />
+        <activity android:name=".Activity_Pdf_AlbumDetails" />
+        <activity android:name=".Activity_Pdf_Detail" />
+        <activity
+            android:name=".Activity_Image_Detail"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImageDetailsTheme">
+            <intent-filter android:label="Gallery">
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <action android:name="android.intent.action.SENDTO" />
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity_Image_Albums" />
+        <activity android:name=".Activity_Image_AlbumDetails"></activity>
+    </application>
+
+</manifest>

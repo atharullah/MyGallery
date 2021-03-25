@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/compPdfAlbumDetailsCardLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:checkable="true"
+    app:cardBackgroundColor="@color/card_bg_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/compPdfAlbumDetailsImg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_folder_24dp"
+        android:transitionName="GalleryPhoto"
+        />
+    <LinearLayout
+        android:id="@+id/compPdfAlbumDetailsTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_gravity="bottom"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:background="@color/transparent_dark"
+        >
+        <TextView
+            android:id="@+id/compPdfAlbumDetailsFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/White"
+            android:textAlignment="textStart"
+            android:gravity="start"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

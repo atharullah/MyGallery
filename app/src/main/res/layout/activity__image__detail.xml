@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutSingleImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_Image_Detail">
+
+    <include layout="@layout/comp_toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RcvImageDetails"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabImgDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        app:layout_dodgeInsetEdges="bottom"
+        android:src="@drawable/ic_expand_more_black_24dp"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imgDetailsBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        app:layout_insetEdge="bottom"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:height="30dp"
+                android:textAlignment="center"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <ImageButton
+                android:src="@drawable/vector_share"
+                android:id="@+id/btnBottomShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:padding="5dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:src="@drawable/vector_delete"
+                android:id="@+id/btnBottomDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:padding="5dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:src="@drawable/vector_delete"
+                android:id="@+id/btnBottomProp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prop"
+                android:padding="5dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

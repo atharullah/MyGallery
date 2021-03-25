@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:targetApi="28">
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+
+        <LinearLayout
+            android:background="#55000000"
+            android:orientation="horizontal"
+            android:layout_height="80dp"
+            android:layout_width="match_parent">
+
+            <ImageButton
+                android:paddingRight="10dp"
+                android:id="@+id/videoPlayerBack"
+                android:background="@color/transparent_full2"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/vector_back_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="center_vertical"
+                android:textColor="@color/White"
+                android:id="@+id/videoPlayerTitle"
+                android:text="Video Title"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@color/transparent_full2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:padding="15dp"
+                android:id="@+id/videoPlayerRepeat"
+                android:background="@color/transparent_full2"
+                android:layout_gravity="start"
+                android:src="@drawable/exo_controls_repeat_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView android:id="@id/exo_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:includeFontPadding="false"
+                android:textColor="#FFBEBEBE"/>
+
+            <View android:id="@id/exo_progress_placeholder"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="26dp"/>
+
+            <TextView android:id="@id/exo_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:includeFontPadding="false"
+                android:textColor="#FFBEBEBE"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_gravity="start"
+                android:id="@+id/videoPlayerLock"
+                android:src="@drawable/vector_lock_24dp"
+                style="@style/ExoMediaButton.Play"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton android:id="@id/exo_prev"
+                    style="@style/ExoMediaButton.Previous"/>
+
+                <ImageButton android:id="@id/exo_shuffle"
+                    style="@style/ExoMediaButton"/>
+
+                <ImageButton android:id="@id/exo_repeat_toggle"
+                    style="@style/ExoMediaButton"/>
+
+                <ImageButton android:id="@id/exo_play"
+                    style="@style/ExoMediaButton.Play"/>
+
+                <ImageButton android:id="@id/exo_pause"
+                    style="@style/ExoMediaButton.Pause"/>
+
+                <ImageButton android:id="@id/exo_next"
+                    style="@style/ExoMediaButton.Next"/>
+
+                <ImageButton android:id="@id/exo_vr"
+                    style="@style/ExoMediaButton.VR"/>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_gravity="end"
+                android:id="@+id/videoPlayerResizer"
+                android:src="@drawable/exo_controls_fullscreen_enter"
+                style="@style/ExoMediaButton"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

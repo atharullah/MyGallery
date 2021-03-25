@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutVideoDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/full_black"
+    tools:context=".Activity_Video_Detail">
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/videoPlayerView"
+        app:controller_layout_id="@layout/comp_video_player_controls"
+        app:show_buffering="never"
+        app:surface_type="surface_view"
+        app:resize_mode="fit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
